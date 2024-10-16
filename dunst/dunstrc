@@ -1,0 +1,83 @@
+[global]
+    # Monitor to display notifications on
+    monitor = 0
+
+    # Follow focus. If set to mouse, notifications pop up at the mouse cursor.
+    follow = mouse
+
+    title = Dunst
+    class = Dunst
+
+    width = 300
+    height = 160
+    origin = top-left
+    offset = 20x60
+    scale = 0 
+    notification_limit = 4
+
+    frame_color = "#000000"
+    frame_width = 1
+    corner_radius = 10
+
+    alignment = left
+    vertical_alignment = center 
+
+    format = %s\n%b
+
+    progress_bar = false
+    progress_bar_height = 80
+    progress_bar_frame_width = 2
+    progress_bar_min_width = 300
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 0
+    indicate_hidden = yes
+
+    line_height = 100
+    word_wrap = no
+    stack_duplicates = false
+    show_indicators = yes
+    enable_recursive_icon_lookup = true
+
+    icon_theme = "breeze-dark, Papirus-Dark"
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 128
+    icon_corner_radius = 5
+
+
+    # history_lenght = 20
+    separator_height = 10
+    padding = 5
+    horizontal_padding = 5
+
+    transparency = 6
+
+    mouse_left_click = close_current
+    mouse_right_click = close_all
+
+    # Paths to dmenu and notification close actions
+    dmenu = /usr/bin/dmenu
+    browser = /usr/bin/google-chrome-stable
+
+
+    font = Hack Nerd Fond Mono 10
+
+
+[urgency_low]
+    # If the notification urgency is low (default background)
+    timeout = 3
+    background = "#222222"
+    foreground = "#888888"
+
+[urgency_normal]
+    # If the notification urgency is normal (default background)
+    timeout = 10
+    background = "#2e3440"
+    foreground = "#D8DEE9"
+    frame_color = "#81A1C1"
+
+[urgency_critical]
+    # If the notification urgency is critical (default background)
+    timeout = 0
+    background = "#ff0000"
+    foreground = "#ffffff"

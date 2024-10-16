@@ -1,0 +1,82 @@
+format = """
+[░▒▓](#EB6536)\
+[ 󰌽 ](bg:#E95420 fg:#77216F)\
+[](bg:#77216F fg:#E95420)\
+$directory\
+[](fg:#77216F bg:#E95420)\
+$git_branch\
+$git_status\
+[](fg:#E95420 bg:#F08763)\
+$nodejs\
+$rust\
+$golang\
+$php\
+$python\
+$java\
+[](fg:#F08763 bg:#F08763)\
+$time\
+[ ](fg:#F08763)\
+\n$character"""
+
+[character]
+success_symbol = "[❯](#E95420)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[directory]
+style = "fg:#E95420 bg:#77216F"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#77216F bg:#E95420)]($style)'
+
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#77216F bg:#F08763)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[java]
+symbol = "☕"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#77216F bg:#F08763)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#77216F bg:#f08763)]($style)'
+
+[time]
+disabled = true 
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
